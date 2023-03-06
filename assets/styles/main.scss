@@ -1,0 +1,30 @@
+@import '_fonts';
+
+// UI
+@import './UI/_animations';
+
+// structure
+@import '_structure';
+
+// components
+@import './components/_cards';
+@import './components/_author';
+@import './components/_score';
+@import './components/_archive';
+@import './components/_buttons';
+
+body {
+    background-color: $color-primary;
+}
+.page-hero {
+    div:has(h1) {
+        overflow: hidden;
+    }
+    h1, h4 {
+        margin: 0;
+    }
+    h1 {
+        line-height: 5rem;
+    }
+
+}

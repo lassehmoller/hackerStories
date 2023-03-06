@@ -1,0 +1,73 @@
+a > * {
+    cursor: pointer;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid $light;
+    border-radius: 5px;
+    max-height: fit-content;
+    border-radius: $radius-base;
+    overflow: hidden;
+    background-color: $light;
+    color: $color-primary;
+    transition: opacity 0.5s ease-in-out var(--delay), transform 0.25s ease-in-out var(--delay);
+
+    img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        border-radius: 0px 0px $radius-base $radius-base;
+    }
+    .card-content {
+        padding: 1rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .to-bottom {
+        flex: 1;
+        align-items: flex-end;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    
+    .card-top {
+        display: flex;
+        position: relative;
+    }
+    
+    button {
+        width: 50px;
+        height: 50px;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 100%;
+        border: none;
+    }
+    @media (hover: hover) {
+        .author {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.25s ease-in-out 0.25s, transform 0.25s ease-in-out 0.25s;
+        }
+        .story-link {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .author, .story-link {
+            opacity: 1;
+            transform: translateX(0px)
+        }
+    }
+}
+
+

@@ -1,0 +1,18 @@
+.score {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left: 10px;
+    background-color: $color-points; 
+    color: $color-primary;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: $radius-base;
+
+    img {
+        width: 20px;
+        height: 25px;
+        object-fit: cover;
+    }
+}

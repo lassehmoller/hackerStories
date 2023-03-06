@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@100;400&family=Jost:wght@100;400&display=swap');
+@import '_colors';
+
+// color definitions
+$color-primary: $dark;
+$color-accent: $green;
+$color-points: $yellow;
+
+
+// Font families
+$font-family-headers: 'Genos', sans-serif;
+$font-family-primary: 'Jost', sans-serif;
+
+// Font sizes
+$font-size-3xl: 5.5rem;
+$font-size-2xl: 5rem;
+$font-size-xl: 4rem;
+$font-size-lg: 3.25rem;
+$font-size-md: 2.5rem;
+$font-size-base: 1.5rem;
+
+// Radius
+$radius-base: 20px;

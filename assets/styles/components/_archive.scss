@@ -1,0 +1,9 @@
+.archive-grid {
+    display: grid;
+    grid-gap: 1rem;
+
+    @media screen and (min-width: 425px) {
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+      
+}

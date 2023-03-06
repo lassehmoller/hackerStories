@@ -1,0 +1,92 @@
+// fade
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+  }
+  .fade-enter-to, .fade-leave-from {
+    opacity: 1;
+  }
+  .fade-enter-from, .fade-leave-to {
+    opacity: 0;
+  }
+
+// fade-fast
+  .fade-fast-enter-active, .fade-fast-leave-active{
+    transition: opacity 0.25s;
+  }
+  .fade-fast-enter-to, .fade-fast-leave-from {
+    opacity: 1;
+  }
+  .fade-fast-enter-from, .fade-fast-leave-to {
+    opacity: 0;
+  }
+  
+  // rise
+  .rise-enter-active {
+    transition: transform 2.5s ease-out, opacity 2.5s ease-out 1s;
+  }
+  .rise-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .rise-enter-from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  // Loading animation
+
+  div:has(>.load-animation) {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    height: 1rem;
+    border-radius: $radius-base;
+    overflow: hidden;
+  }
+
+  .load-animation {
+    position: absolute;
+    height: 100%;
+    background-color: $color-accent;
+    animation-name: shift-width-both;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: both;
+    animation-timing-function: ease-in-out;
+}
+@keyframes shift-width-both {
+    0% {
+        left:0;
+        right: unset;
+        width: 0;
+    }
+    25% {
+        width: 100%;
+    }
+    50% {
+        width: 0;
+        right:0;
+        left: unset;
+    }
+    75% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+        right:unset;
+        left: 0;
+    }
+}
+
+// Animation utilities
+.opacity-0 {
+    opacity: 0;
+}
+.opacity-100 {
+    opacity: 1;
+}
+
+.pre-fade-in-up {
+  opacity: 0;
+  transform: translateY(25px);
+}

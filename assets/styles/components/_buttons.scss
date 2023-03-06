@@ -1,0 +1,19 @@
+.story-link {
+  background-color: $color-primary;
+
+  border-radius: 100%;
+  padding: 15px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+
+  svg {
+    fill: $color-accent;
+    transition: transform 0.15s ease-in-out;
+  }
+  &:hover {
+    svg {
+      transform: rotate(45deg);
+    }
+  }
+}
