@@ -15,7 +15,7 @@ export const useHelpers = (authors: Array<Object>) => {
   }
 
   const sortStories = (stories: Array<Object>) => { Array<Object> 
-    return stories.sort((a, b) => b.score - a.score);
+    return stories.sort((a, b) => a.score - b.score);
   }
 
   const formatNumber = (number: Number) => { String
